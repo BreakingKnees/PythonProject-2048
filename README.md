@@ -42,8 +42,8 @@ sudo pip install keyboard
 Option 1 – Clone with git:
 
 ```bash 
-git clone <your-repo-link>
-cd <project-folder>
+git https://github.com/BreakingKnees/PythonProject-2048/
+cd PythonProjeect
 ```
 Option 2 – Download ZIP:
 1. Click Code → Download ZIP
