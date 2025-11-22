@@ -52,8 +52,9 @@ Option 2 – Download ZIP:
 ### ▶️ How to Run the Game
 From inside the project folder, run:
 ```bash 
-python3 main.py
+sudo python3 main.py
 ```
+(You must be root to use this library [keyboard] on linux.)
 
 ### Team Members:
 Aaditya Khanna IE2025001
