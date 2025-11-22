@@ -1,4 +1,5 @@
 import random
+import file_manager
 from file_manager import highscore, save_highscore
 
 score = 0
@@ -16,7 +17,6 @@ def compress(row, size):
 
 def merge(row, size):
     global score
-    from file_manager import highscore
 
     for i in range(size - 1):
         if row[i] != 0 and row[i] == row[i + 1]:
@@ -24,9 +24,12 @@ def merge(row, size):
             score += row[i]
             row[i + 1] = 0
 
-            if score > highscore:
-                save_highscore()
+            # FIX: use real shared highscore
+            if score > file_manager.highscore:
+                file_manager.highscore = score
+                file_manager.save_highscore()
     return row
+
 
 def left(board, size):
     new = []
