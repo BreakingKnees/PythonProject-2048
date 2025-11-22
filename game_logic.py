@@ -23,8 +23,7 @@ def merge(row, size):
             row[i] *= 2
             score += row[i]
             row[i + 1] = 0
-
-            # FIX: use real shared highscore
+            
             if score > file_manager.highscore:
                 file_manager.highscore = score
                 file_manager.save_highscore()
