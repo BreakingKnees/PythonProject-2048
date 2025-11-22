@@ -1,3 +1,4 @@
+import file_manager
 from file_manager import highscore
 
 RESET = "\033[0m"
@@ -20,7 +21,7 @@ COLORS = {
 BORDER_COLOR = "\033[37m"
 
 def print_board(board, size, score):
-    print(f"Score: {score} | High Score: {highscore}")
+    print(f"Score: {score} | High Score: {file_manager.highscore}")
     line = BORDER_COLOR + ("+------" * size) + "+" + RESET
     print("\n" + line)
     for row in board:
